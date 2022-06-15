@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Register</title>
+    <link rel="stylesheet" href="css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+
+    <script src="js/validation.js" defer> </script>
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section class="content-section">
+        <div id="container-form"> 
+            <header>
+                <div class="content-section_header column">
+                    <span class="image">
+                        <img src="img/data 1.png" alt="logo">
+                    </span>
+                    <span class="image">
+                        <img src="img/Text.png" alt="title">
+                    </span>
+                </div>
+            </header>
+            <main class="content-section_main column">
+                <form action="" class="form-register title-field label-format">
+                    <div class="form-register_information">
+                        <div class="field full-width">
+                            <span class="error"></span>
+                            <label for="name">Full Name *</label>
+                            <input class="name1" required id="name1" type="text" name="name1" placeholder="Name" onchange="validateName()">
+                        </div>
+                        <div class="field field-size">
+                            <span class="error"></span>
+                            <label for="email">Email *</label>
+                            <input class="email" required id="email" type="email" name="email" placeholder="foo@bar.com">
+                        </div>
+                        <div class="field">
+                            <span class="error"></span>
+                            <label for="phone">Phone</label>
+                            <input class="phone"    id="phone" type="tel" name="phone" maxlength="15" placeholder="(00) 00000-0000" required>
+                        </div>
+                        <div class="field field-size">
+                            <span class="error"></span>
+                            <label for="password">Password *</label>
+                            <input class="password" id="password"  maxlength="9" type="password" name="password" onchange="validatePassword()"required>
+                        </div>
+                        <div class="field">
+                            <span class="error"></span>
+                            <label for="birthday">Birthday *</label>
+                            <input class="birthday" required id="birthday" type="date" name="birthday" placeholder=" dd/mm/aaaa">
+                        </div>
+                        <div class="custom-checkbox space-between field column-checkbox title-field">
+                            <div class="custom-checkbox_information"> 
+                                <span class="check error"></span>
+                                <input class="checkbox" required id="checkbox-terms" type="checkbox" name="checkbox-terms" onclick="isChecked()">
+                                <label class="checkbox-title" id="checkbox-title" for="checkbox-terms"> I accept the terms and privacy</label>
+                                <button class="button-register" id="button-register" type="submit" disabled>Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+        <div id="container-success"> 
+            <div class="content-section_success column-success">
+                <span class="item">
+                    <img src="img/data 1.png" alt="logo">
+                </span>
+                <span class="item">
+                    <img src="img/TextSuccess.png" alt="title">
+                </span>
+                <span class="item botao"> 
+                    <button id="button-success">Go Back!</button>
+                </span>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
